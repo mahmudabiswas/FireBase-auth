@@ -8,6 +8,8 @@ import Home from "./AuthProjects/Home.jsx";
 import LogIn from "./AuthProjects/LogIn.jsx";
 import Register from "./AuthProjects/Register.jsx";
 import AuthProvider, { AuthContext } from "./AuthProjects/AuthProvider.jsx";
+import Order from "./AuthProjects/Order.jsx";
+import PrivateRawter from "./AuthProjects/PrivateRawter.jsx";
 // import Home from "./Components/Home.jsx";
 // import Root from "./Components/Root.jsx";
 // import LogIn from "./Components/LogIn.jsx";
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/order",
+        element: (
+          <PrivateRawter>
+            <Order />
+          </PrivateRawter>
+        ),
       },
     ],
   },
