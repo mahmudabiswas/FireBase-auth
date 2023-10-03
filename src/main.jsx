@@ -7,6 +7,7 @@ import Root from "./AuthProjects/Root.jsx";
 import Home from "./AuthProjects/Home.jsx";
 import LogIn from "./AuthProjects/LogIn.jsx";
 import Register from "./AuthProjects/Register.jsx";
+import AuthProvider, { AuthContext } from "./AuthProjects/AuthProvider.jsx";
 // import Home from "./Components/Home.jsx";
 // import Root from "./Components/Root.jsx";
 // import LogIn from "./Components/LogIn.jsx";
@@ -36,6 +37,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
